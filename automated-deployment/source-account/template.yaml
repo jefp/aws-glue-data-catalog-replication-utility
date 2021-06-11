@@ -185,7 +185,7 @@ Resources:
     rGDCReplicationPlannerLambda:
       Type: "AWS::Serverless::Function"
       Properties:
-        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.0.jar
+        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.1.jar
         FunctionName: "GDCReplicationPlannerLambda"
         Environment:
           Variables:
@@ -224,7 +224,7 @@ Resources:
     rExportLambda:
       Type: "AWS::Serverless::Function"
       Properties:
-        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.0.jar
+        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.1.jar
         FunctionName: "ExportLambda"
         Environment:
           Variables:
@@ -252,7 +252,7 @@ Resources:
     rExportLargeTableLambda:
       Type: "AWS::Serverless::Function"
       Properties:
-        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.0.jar
+        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.1.jar
         FunctionName: "ExportLargeTableLambda"
         Environment:
           Variables:

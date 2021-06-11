@@ -133,7 +133,7 @@ Resources:
     rImportLambda:
       Type: "AWS::Serverless::Function"
       Properties:
-        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.0.jar
+        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.1.jar
         FunctionName: "ImportLambda"
         Environment:
           Variables:
@@ -154,7 +154,7 @@ Resources:
     rImportLargeTableLambda:
       Type: "AWS::Serverless::Function"
       Properties:
-        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.0.jar
+        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.1.jar
         FunctionName: "ImportLargeTableLambda"
         Environment:
           Variables:
@@ -180,7 +180,7 @@ Resources:
     rDLQProcessorLambda:
       Type: "AWS::Serverless::Function"
       Properties:
-        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.0.jar
+        CodeUri: ../aws-glue-data-catalog-replication-utility-1.0.1.jar
         FunctionName: "DLQProcessorLambda"
         Environment:
           Variables:
