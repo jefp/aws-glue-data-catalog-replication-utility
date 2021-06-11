@@ -207,7 +207,17 @@ public class GlueUtil {
 		getTablesRequest.setDatabaseName(databaseName);
 		GetTablesResult getTablesResult = glue.getTables(getTablesRequest);
 		List<Table> tableList = getTablesResult.getTableList();
-		masterTableList.addAll(tableList);
+
+		// Skip deprecated tables
+		for (Table table : tableList) {
+			if (table.getParameters().containsKey("DEPRECATED_BY_CRAWLER"))
+		    {
+				System.out.printf("Table '%s' is deprecated \n", table.getName());
+			}
+			else{
+				masterTableList.add(table);
+			}
+		}
 		String tableResultNextToken = getTablesResult.getNextToken();
 		if (Optional.ofNullable(tableResultNextToken).isPresent()) {
 			do {
@@ -218,7 +228,17 @@ public class GlueUtil {
 				getTablesRequest.setDatabaseName(databaseName);
 				getTablesResult = glue.getTables(getTablesRequest);
 				tableList = getTablesResult.getTableList();
-				masterTableList.addAll(tableList);
+
+				// Skip deprecated tables
+				for (Table table : tableList) {
+					if (table.getParameters().containsKey("DEPRECATED_BY_CRAWLER"))
+					{
+						System.out.printf("Table '%s' is deprecated \n", table.getName());
+					}
+					else{
+						masterTableList.add(table);
+					}
+				}
 				tableResultNextToken = getTablesResult.getNextToken();
 			} while (Optional.ofNullable(tableResultNextToken).isPresent());
 		}

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.amazonaws.glue.catalog.replication</groupId>
 	<artifactId>aws-glue-data-catalog-replication-utility</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
 	<build>
